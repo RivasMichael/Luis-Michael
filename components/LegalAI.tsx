@@ -18,7 +18,7 @@ const LegalAI: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-[#0B1221] border-t border-[#E8DCC4]/10">
+    <section id="ai-consultant" className="py-24 bg-[#0B1221] border-t border-[#E8DCC4]/10">
       <div className="container mx-auto px-6 max-w-4xl text-center">
         <div className="mb-12">
           <div className="inline-block p-2 rounded-full bg-[#E8DCC4]/10 mb-4">

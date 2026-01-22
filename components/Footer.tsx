@@ -2,6 +2,17 @@
 import React from 'react';
 
 const Footer: React.FC = () => {
+  const handleInternalLink = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      window.scrollTo({
+        top: elem.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <footer id="contact" className="bg-[#050A14] pt-24 pb-12 border-t border-[#E8DCC4]/5">
       <div className="container mx-auto px-6">
@@ -30,11 +41,11 @@ const Footer: React.FC = () => {
           <div>
             <h5 className="serif text-xl font-bold mb-6 text-[#E8DCC4]">Navegación</h5>
             <ul className="space-y-4">
-              {['Inicio', 'Nosotros', 'Revistas', 'Entrevistas', 'Autores'].map(item => (
-                <li key={item}>
-                  <a href="#" className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">{item}</a>
-                </li>
-              ))}
+              <li><a href="#home" onClick={(e) => handleInternalLink(e, 'home')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Inicio</a></li>
+              <li><a href="#about" onClick={(e) => handleInternalLink(e, 'about')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Nosotros</a></li>
+              <li><a href="#publications" onClick={(e) => handleInternalLink(e, 'publications')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Revistas</a></li>
+              <li><a href="#interviews" onClick={(e) => handleInternalLink(e, 'interviews')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Entrevistas</a></li>
+              <li><a href="#team" onClick={(e) => handleInternalLink(e, 'team')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Equipo</a></li>
             </ul>
           </div>
           
@@ -56,9 +67,9 @@ const Footer: React.FC = () => {
         <div className="border-t border-[#E8DCC4]/5 pt-12 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] uppercase tracking-[0.3em] text-[#E8DCC4]/30">
           <p>© 2024 Lex Corporativa. Todos los derechos reservados.</p>
           <div className="flex space-x-8">
-            <a href="#" className="hover:text-[#E8DCC4]">Privacidad</a>
-            <a href="#" className="hover:text-[#E8DCC4]">Términos</a>
-            <a href="#" className="hover:text-[#E8DCC4]">Cookies</a>
+            <a href="#contact" onClick={(e) => e.preventDefault()} className="hover:text-[#E8DCC4]">Privacidad</a>
+            <a href="#contact" onClick={(e) => e.preventDefault()} className="hover:text-[#E8DCC4]">Términos</a>
+            <a href="#contact" onClick={(e) => e.preventDefault()} className="hover:text-[#E8DCC4]">Cookies</a>
           </div>
         </div>
       </div>
