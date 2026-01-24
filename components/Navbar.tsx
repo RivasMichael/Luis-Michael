@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import Logo from './Logo';
+import Logo from './Logo.tsx';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

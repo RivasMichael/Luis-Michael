@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Logo from './Logo';
+import Logo from './Logo.tsx';
 
 const Footer: React.FC = () => {
   const handleInternalLink = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -15,15 +15,15 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="contact" className="bg-[#040114] pt-24 pb-12 border-t border-[#E8DCC4]/5">
+    <footer id="contact" className="bg-[#040114] pt-24 pb-12 border-t border-[#E8DCC4]/5 text-[#E8DCC4]">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-2">
             <div className="flex items-center space-x-6 mb-8">
               <Logo size={80} />
               <div className="flex flex-col">
-                <span className="serif text-2xl font-bold tracking-widest text-[#E8DCC4]">LEX CORPORATIVA</span>
-                <span className="text-xs tracking-[0.4em] uppercase opacity-60 text-[#E8DCC4]">Revista Jurídica</span>
+                <span className="serif text-2xl font-bold tracking-widest">LEX CORPORATIVA</span>
+                <span className="text-xs tracking-[0.4em] uppercase opacity-60">Revista Jurídica</span>
               </div>
             </div>
             <p className="text-[#E8DCC4]/60 max-w-sm leading-relaxed mb-8">
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h5 className="serif text-xl font-bold mb-6 text-[#E8DCC4]">Navegación</h5>
+            <h5 className="serif text-xl font-bold mb-6">Navegación</h5>
             <ul className="space-y-4">
               <li><a href="#home" onClick={(e) => handleInternalLink(e, 'home')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Inicio</a></li>
               <li><a href="#about" onClick={(e) => handleInternalLink(e, 'about')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Nosotros</a></li>
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h5 className="serif text-xl font-bold mb-6 text-[#E8DCC4]">Contacto</h5>
+            <h5 className="serif text-xl font-bold mb-6">Contacto</h5>
             <ul className="space-y-4">
               <li className="text-sm text-[#E8DCC4]/60">
                 <span className="block text-[10px] uppercase tracking-widest text-[#E8DCC4]/40 mb-1">Email</span>
