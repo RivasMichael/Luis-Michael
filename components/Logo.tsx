@@ -24,8 +24,10 @@ const Logo: React.FC<LogoProps> = ({ size = 100, className = "", showText = fals
 
         {/* Text Paths */}
         <defs>
-          <path id="topTextPath" d="M 30,100 A 70,70 0 1,1 170,100" />
-          <path id="bottomTextPath" d="M 30,100 A 70,70 0 1,0 170,100" />
+          {/* Top arc: Left to Right, Clockwise */}
+          <path id="topTextPath" d="M 30,100 A 70,70 0 0,1 170,100" />
+          {/* Bottom arc: Right to Left, Clockwise (to keep text upright) */}
+          <path id="bottomTextPath" d="M 170,100 A 70,70 0 0,1 30,100" />
         </defs>
 
         {/* Top Text: LEX CORPORATIVA */}
@@ -36,8 +38,9 @@ const Logo: React.FC<LogoProps> = ({ size = 100, className = "", showText = fals
         </text>
 
         {/* Bottom Text: REVISTA JURÍDICA */}
+        {/* Fix: Removed 'side' attribute (not in SVGTextPathElement types) and reversed path direction for proper orientation */}
         <text fill="#E8DCC4" className="serif" style={{ fontSize: '18px', letterSpacing: '0.05em' }}>
-          <textPath xlinkHref="#bottomTextPath" startOffset="50%" textAnchor="middle" side="right">
+          <textPath xlinkHref="#bottomTextPath" startOffset="50%" textAnchor="middle">
             REVISTA JURÍDICA
           </textPath>
         </text>
