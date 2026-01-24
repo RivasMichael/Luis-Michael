@@ -2,7 +2,7 @@
 import { TeamMember, Publication, Interview } from './types';
 
 export const COLORS = {
-  primary: '#0B1221', // Dark Navy
+  primary: '#0b0332', // Nuevo Azul Profundo
   accent: '#E8DCC4',  // Cream/Gold
   muted: '#2C3E50',
   white: '#FFFFFF'
@@ -11,24 +11,27 @@ export const COLORS = {
 export const TEAM: TeamMember[] = [
   {
     id: '1',
-    name: 'Dr. Alejandro Valdés',
+    name: 'Valdés Alejandro',
     role: 'Director Editorial',
-    bio: 'Especialista en Derecho Corporativo con más de 20 años de trayectoria académica y profesional.',
-    imageUrl: 'https://picsum.photos/seed/law1/400/500'
+    bio: 'Especialista en Derecho Corporativo con enfoque en estrategia legal internacional.',
+    imageUrl: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&h=800&auto=format&fit=crop',
+    linkedinUrl: 'https://linkedin.com'
   },
   {
     id: '2',
-    name: 'Mtra. Sofía Carrillo',
+    name: 'Carrillo Sofía',
     role: 'Coordinadora de Investigaciones',
-    bio: 'Experta en Litigio Civil y Mercantil, dedicada a la supervisión científica de nuestras publicaciones.',
-    imageUrl: 'https://picsum.photos/seed/law2/400/500'
+    bio: 'Experta en Litigio Mercantil y supervisión de rigor científico editorial.',
+    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&h=800&auto=format&fit=crop',
+    linkedinUrl: 'https://linkedin.com'
   },
   {
     id: '3',
-    name: 'Lic. Ricardo Mendoza',
+    name: 'Mendoza Ricardo',
     role: 'Jefe de Redacción',
-    bio: 'Periodista jurídico con enfoque en análisis normativo y tendencias legales internacionales.',
-    imageUrl: 'https://picsum.photos/seed/law3/400/500'
+    bio: 'Periodista jurídico especializado en análisis normativo y tendencias globales.',
+    imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&h=800&auto=format&fit=crop',
+    linkedinUrl: 'https://linkedin.com'
   }
 ];
 

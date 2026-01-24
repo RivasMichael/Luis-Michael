@@ -18,7 +18,7 @@ const LegalAI: React.FC = () => {
   };
 
   return (
-    <section id="ai-consultant" className="py-24 bg-[#0B1221] border-t border-[#E8DCC4]/10">
+    <section id="ai-consultant" className="py-24 bg-[#0b0332] border-t border-[#E8DCC4]/10">
       <div className="container mx-auto px-6 max-w-4xl text-center">
         <div className="mb-12">
           <div className="inline-block p-2 rounded-full bg-[#E8DCC4]/10 mb-4">
@@ -43,7 +43,7 @@ const LegalAI: React.FC = () => {
           <button 
             type="submit" 
             disabled={isLoading}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#E8DCC4] text-[#0B1221] w-12 h-12 flex items-center justify-center hover:bg-white transition-all disabled:opacity-50"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#E8DCC4] text-[#0b0332] w-12 h-12 flex items-center justify-center hover:bg-white transition-all disabled:opacity-50"
           >
             {isLoading ? (
               <div className="animate-spin rounded-full h-5 w-5 border-2 border-slate-900 border-t-transparent"></div>

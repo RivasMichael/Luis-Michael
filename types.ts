@@ -5,6 +5,7 @@ export interface TeamMember {
   role: string;
   bio: string;
   imageUrl: string;
+  linkedinUrl: string;
 }
 
 export interface Publication {

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   const handleInternalLink = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -14,17 +15,15 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="contact" className="bg-[#050A14] pt-24 pb-12 border-t border-[#E8DCC4]/5">
+    <footer id="contact" className="bg-[#040114] pt-24 pb-12 border-t border-[#E8DCC4]/5">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-2">
-            <div className="flex items-center space-x-3 mb-8">
-              <div className="w-16 h-16 border-2 border-[#E8DCC4] flex items-center justify-center overflow-hidden">
-                <span className="serif text-3xl font-bold text-[#E8DCC4]">LC</span>
-              </div>
+            <div className="flex items-center space-x-6 mb-8">
+              <Logo size={80} />
               <div className="flex flex-col">
                 <span className="serif text-2xl font-bold tracking-widest text-[#E8DCC4]">LEX CORPORATIVA</span>
-                <span className="text-xs tracking-[0.4em] uppercase opacity-60">Revista Jurídica</span>
+                <span className="text-xs tracking-[0.4em] uppercase opacity-60 text-[#E8DCC4]">Revista Jurídica</span>
               </div>
             </div>
             <p className="text-[#E8DCC4]/60 max-w-sm leading-relaxed mb-8">
@@ -65,7 +64,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-[#E8DCC4]/5 pt-12 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] uppercase tracking-[0.3em] text-[#E8DCC4]/30">
-          <p>© 2024 Lex Corporativa. Todos los derechos reservados.</p>
+          <p>© 2025 Lex Corporativa. Todos los derechos reservados.</p>
           <div className="flex space-x-8">
             <a href="#contact" onClick={(e) => e.preventDefault()} className="hover:text-[#E8DCC4]">Privacidad</a>
             <a href="#contact" onClick={(e) => e.preventDefault()} className="hover:text-[#E8DCC4]">Términos</a>
