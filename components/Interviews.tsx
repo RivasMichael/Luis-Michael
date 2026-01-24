@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { INTERVIEWS } from '../constants';
+import { INTERVIEWS } from '../constants.tsx';
 
 const Interviews: React.FC = () => {
   return (

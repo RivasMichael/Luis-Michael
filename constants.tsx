@@ -1,9 +1,9 @@
 
-import { TeamMember, Publication, Interview } from './types';
+import { TeamMember, Publication, Interview } from './types.ts';
 
 export const COLORS = {
-  primary: '#0b0332', // Nuevo Azul Profundo
-  accent: '#E8DCC4',  // Cream/Gold
+  primary: '#0b0332',
+  accent: '#E8DCC4',
   muted: '#2C3E50',
   white: '#FFFFFF'
 };

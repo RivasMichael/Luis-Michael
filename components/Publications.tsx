@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PUBLICATIONS } from '../constants';
+import { PUBLICATIONS } from '../constants.tsx';
 
 const Publications: React.FC = () => {
   return (

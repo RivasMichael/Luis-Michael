@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { TEAM } from '../constants';
+import { TEAM } from '../constants.tsx';
 
 const Team: React.FC = () => {
   return (
@@ -15,7 +15,6 @@ const Team: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-16 lg:gap-24">
           {TEAM.map((member) => (
             <div key={member.id} className="flex flex-col items-center text-center group">
-              {/* Photo - Square 1:1 format, White background focus */}
               <div className="relative w-full aspect-square mb-8 overflow-hidden bg-white shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
                 <img 
                   src={member.imageUrl} 
@@ -25,22 +24,18 @@ const Team: React.FC = () => {
                 <div className="absolute inset-0 border border-[#E8DCC4]/10 pointer-events-none"></div>
               </div>
 
-              {/* Role */}
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#E8DCC4] font-bold mb-2 opacity-60">
                 {member.role}
               </span>
 
-              {/* Name - Surname First */}
               <h4 className="serif text-2xl font-bold mb-3 tracking-wide text-[#E8DCC4]">
                 {member.name}
               </h4>
 
-              {/* Bio - Short one-liner */}
               <p className="text-[#E8DCC4]/80 text-sm leading-relaxed mb-6 max-w-xs h-10 italic">
                 {member.bio}
               </p>
 
-              {/* LinkedIn Link */}
               <a 
                 href={member.linkedinUrl} 
                 target="_blank" 
