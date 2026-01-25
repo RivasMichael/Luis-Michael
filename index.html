@@ -6,32 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lex Corporativa | Repositorio Jurídico</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --navy: #05021a;
-            --cream: #E8DCC4;
-            --accent: #80cc66;
-        }
         body {
-            background-color: var(--navy);
+            font-family: 'Inter', sans-serif;
+            background-color: #05021a;
             margin: 0;
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
         .serif { font-family: 'Playfair Display', serif; }
-        
-        /* Utility for line clamping */
         .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .line-clamp-4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
+    
     <script type="importmap">
     {
       "imports": {
@@ -45,7 +36,7 @@
     }
     </script>
 </head>
-<body class="bg-[#05021a]">
+<body>
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
 </body>
