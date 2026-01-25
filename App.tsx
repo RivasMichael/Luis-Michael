@@ -7,6 +7,7 @@ import Publications from './components/Publications.tsx';
 import CTA from './components/CTA.tsx';
 import Footer from './components/Footer.tsx';
 import ReaderModal from './components/ReaderModal.tsx';
+import SocialSidebar from './components/SocialSidebar.tsx';
 
 const App: React.FC = () => {
   const [activePdf, setActivePdf] = useState<string | null>(null);
@@ -24,6 +25,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#0b0332]">
       <Navbar />
+      <SocialSidebar />
       <main>
         {/* 2. Hero: Propuesta de valor y definición */}
         <Hero />

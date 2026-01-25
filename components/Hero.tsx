@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { SOCIAL_LINKS } from '../constants.tsx';
 
 const Hero: React.FC = () => {
   return (
@@ -26,16 +27,25 @@ const Hero: React.FC = () => {
               <span className="opacity-80 italic font-normal">DIGITAL</span>
             </h1>
             
-            <div className="max-w-2xl space-y-6 mb-14">
+            <div className="max-w-2xl space-y-6 mb-10">
               <p className="text-lg md:text-2xl text-[#E8DCC4]/90 font-light leading-relaxed">
                 Revistas especializadas y documentos académicos diseñados para la <span className="font-bold">vanguardia jurídica corporativa</span>.
               </p>
-              <p className="text-sm md:text-base text-[#E8DCC4]/60 tracking-wide uppercase font-medium">
-                Un espacio de consulta para estudiantes, investigadores y profesionales del derecho.
-              </p>
+              <div className="flex items-center space-x-6">
+                <p className="text-sm md:text-base text-[#E8DCC4]/60 tracking-wide uppercase font-medium">
+                  Síguenos en nuestra etapa de crecimiento:
+                </p>
+                <div className="flex space-x-4">
+                  {Object.entries(SOCIAL_LINKS).map(([name, url]) => (
+                    <a key={name} href={url} target="_blank" rel="noopener noreferrer" className="text-[#E8DCC4] hover:text-[#80cc66] transition-colors">
+                      <span className="text-[10px] uppercase tracking-widest font-black underline underline-offset-4">{name}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto mt-6">
               <a 
                 href="#readings" 
                 className="group relative px-12 py-5 overflow-hidden bg-[#E8DCC4] text-[#0b0332] font-black tracking-[0.3em] uppercase text-[10px] transition-all duration-500 hover:shadow-[0_0_30px_rgba(232,220,196,0.2)]"
