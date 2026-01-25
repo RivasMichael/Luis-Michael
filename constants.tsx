@@ -51,7 +51,7 @@ export const PUBLICATIONS: (Publication & { pdfUrl: string; author: string })[] 
   {
     id: '4',
     title: 'Revocación por ingratitud: ¿Excepción moral o regla funcional en Derecho Civil peruano?',
-    author: 'Yamiley Mayumi Solano Tinta',
+    author: 'Yamiley Mayumi Solano Tinto',
     edition: 'Derecho Civil / Contratos',
     date: '14 jul 2025',
     coverUrl: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=600&h=800&auto=format&fit=crop',
@@ -63,7 +63,7 @@ export const PUBLICATIONS: (Publication & { pdfUrl: string; author: string })[] 
 export const TEAM: TeamMember[] = [
   {
     id: '1',
-    name: 'Yamiley Mayumi Solano Tinta',
+    name: 'Yamiley Mayumi Solano Tinto',
     role: 'Fundadora',
     bio: 'Fundadora. Impulsa la creación y desarrollo de Lex Corporativa como un espacio de investigación, análisis y difusión del pensamiento jurídico estudiantil.',
     imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&h=800&auto=format&fit=crop',
