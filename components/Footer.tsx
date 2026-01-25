@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Logo from './Logo.tsx';
+import { SOCIAL_LINKS, CONTACT_EMAIL } from '../constants.tsx';
 
 const Footer: React.FC = () => {
   const handleInternalLink = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -31,8 +32,16 @@ const Footer: React.FC = () => {
               Únete a nuestra comunidad de lectores y autores.
             </p>
             <div className="flex space-x-6">
-              {['Twitter', 'LinkedIn', 'Instagram', 'YouTube'].map(social => (
-                <a key={social} href="#" className="text-[#E8DCC4]/40 hover:text-[#E8DCC4] transition-colors uppercase text-[10px] font-bold tracking-[0.2em]">{social}</a>
+              {Object.entries(SOCIAL_LINKS).map(([name, url]) => (
+                <a 
+                  key={name} 
+                  href={url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-[#E8DCC4]/40 hover:text-[#E8DCC4] transition-colors uppercase text-[10px] font-bold tracking-[0.2em]"
+                >
+                  {name}
+                </a>
               ))}
             </div>
           </div>
@@ -43,7 +52,6 @@ const Footer: React.FC = () => {
               <li><a href="#home" onClick={(e) => handleInternalLink(e, 'home')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Inicio</a></li>
               <li><a href="#about" onClick={(e) => handleInternalLink(e, 'about')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Nosotros</a></li>
               <li><a href="#publications" onClick={(e) => handleInternalLink(e, 'publications')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Revistas</a></li>
-              <li><a href="#interviews" onClick={(e) => handleInternalLink(e, 'interviews')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Entrevistas</a></li>
               <li><a href="#team" onClick={(e) => handleInternalLink(e, 'team')} className="text-sm text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors">Equipo</a></li>
             </ul>
           </div>
@@ -53,11 +61,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="text-sm text-[#E8DCC4]/60">
                 <span className="block text-[10px] uppercase tracking-widest text-[#E8DCC4]/40 mb-1">Email</span>
-                redaccion@lexcorporativa.com
+                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">{CONTACT_EMAIL}</a>
               </li>
               <li className="text-sm text-[#E8DCC4]/60">
                 <span className="block text-[10px] uppercase tracking-widest text-[#E8DCC4]/40 mb-1">Oficina</span>
-                Av. de la Constitución 140, Piso 12, Ciudad Central.
+                Lima, Perú.
               </li>
             </ul>
           </div>
